@@ -29,6 +29,7 @@ public class DriverFactory {
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			driver.get("https://www.saucedemo.com/");
 		}
 		
 		return driver;

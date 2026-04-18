@@ -30,6 +30,11 @@ public class LoginPage {
 		driver.findElement(submit).click();
 
 	}
+	
+	public void clearUserLogin() {
+		driver.findElement(username).clear();
+		driver.findElement(passWord).clear();
+	}
 
 	public String getErrorMessege() {
 
