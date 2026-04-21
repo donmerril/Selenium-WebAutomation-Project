@@ -36,6 +36,12 @@ public class DriverFactory {
 	}
 	
 	
+	public static WebDriver getDriver() {
+		
+		return driver;
+	}
+	
+	
 	public static void tearDown() {
 
         if (driver != null) {
