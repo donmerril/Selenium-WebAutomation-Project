@@ -25,7 +25,7 @@ public class LoginSteps {
 
 	}
 	
-	@Given("the user is logged in")
+	@Given("User is logged in and on the product page")
 	public void the_user_is_logged_in() {
 	    
 		driver = DriverFactory.initializeDriver();
@@ -47,6 +47,7 @@ public class LoginSteps {
 	    
 		String currentURL = driver.getCurrentUrl();
 		Assert.assertEquals(currentURL,"https://www.saucedemo.com/");
+		DriverFactory.tearDown();
 	}
 
 	@When("user attempts login with username {string} and password {string}")

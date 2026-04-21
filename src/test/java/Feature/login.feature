@@ -5,11 +5,6 @@ Feature: Validate login functionality in saucedemo website
     When user attempts login with username "standard_user" and password "secret_sauce"
     Then user should be navigated to products page
 
-  Scenario: User logs out successfully
-    Given the user is logged in
-    When the user logs out
-    Then the user should be redirected to the login page
-
   Scenario: Verify login failure with invalid credentials
     Given user is on login page
     When user attempts login with username "standard_userrr" and password "secret"
@@ -24,3 +19,8 @@ Feature: Validate login functionality in saucedemo website
     Given user is on login page
     When user attempts login with username "standard_user" and password ""
     Then an error messege should be displayed saying "Password is required"
+
+  Scenario: User logs out successfully
+    Given User is logged in and on the product page
+    When the user logs out
+    Then the user should be redirected to the login page
